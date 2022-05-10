@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Sources\Diagnostics">
+      <UniqueIdentifier>{130b9f4b-b1d6-4252-98a6-463f39b54562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Sources\Math">
+      <UniqueIdentifier>{d094b6cb-b39d-46d8-8120-2e98863f6393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Memory">
+      <UniqueIdentifier>{28b9783c-50e0-448d-b974-ad7fc8d23460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Platform">
+      <UniqueIdentifier>{3bf14a25-3c25-4e72-b04b-c0623e72bdfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Serializer">
+      <UniqueIdentifier>{c8438cf7-76b8-42c2-bd3b-99e28d535797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Platform">
+      <UniqueIdentifier>{42d24b50-020b-41d8-9952-7ca75f34915e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\sources\foundation\diagnostics\diagnostics_assertions.cxx">
+      <Filter>Sources\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\diagnostics\diagnostics_format.cxx">
+      <Filter>Sources\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\diagnostics\diagnostics.cxx">
+      <Filter>Sources\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\memory\memory.cxx">
+      <Filter>Sources\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\memory\memory_abstracts.cxx">
+      <Filter>Sources\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\memory\memory_allocators.cxx">
+      <Filter>Sources\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\memory\memory_procedures.cxx">
+      <Filter>Sources\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\diagnostics\diagnostics_print.cxx">
+      <Filter>Sources\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\math\math.cxx">
+      <Filter>Sources\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\math\math_procedures.cxx">
+      <Filter>Sources\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\platform\platform.cxx">
+      <Filter>Sources\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\platform\platform_configuration.cxx">
+      <Filter>Sources\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\platform\platform_endian.cxx">
+      <Filter>Sources\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\diagnostics\diagnostics_status.cxx">
+      <Filter>Sources\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\serializer\serializer.cxx">
+      <Filter>Sources\Serializer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\serializer\serializer_abstracts.cxx">
+      <Filter>Sources\Serializer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sources\foundation\serializer\serializer_strategies.cxx">
+      <Filter>Sources\Serializer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sources\foundation\platform\platform_configuration.hxx">
+      <Filter>Headers\Platform</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Headers\pfr">
+      <UniqueIdentifier>{a65f5f7f-54c0-41ba-b4cd-dcf89d6a7c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\pfr\detail">
+      <UniqueIdentifier>{f7580d94-cfae-4ee3-a021-03b966915ad3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\core.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\functions_for.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\functors.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\io.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\io_fields.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\ops.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\ops_fields.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\tuple_size.hpp">
+      <Filter>Headers\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\cast_to_layout_compatible.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\config.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core14_classic.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core14_loophole.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core17.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core17_generated.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\detectors.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\fields_count.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\for_each_field_impl.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\functional.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\io.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\make_flat_tuple_of_references.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\make_integer_sequence.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\offset_based_getter.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\rvalue_t.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\sequence_tuple.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\size_array.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\size_t_.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\stdtuple.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\tie_from_structure_tuple.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\unsafe_declval.hpp">
+      <Filter>Headers\pfr\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

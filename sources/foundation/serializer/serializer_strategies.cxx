@@ -24,7 +24,7 @@ export module aethelwerka.foundation.serializer:strategies;
 // Imports:
 //-----------------------------------------------------------------------------
 #pragma warning(disable : 5050)
-export import :abstracts;
+import :abstracts;
 import aethelwerka.foundation.diagnostics; // Using: {expect, ensure, status, print};
 import aethelwerka.foundation.platform;    // Using: {endian_swap};
 //-----------------------------------------------------------------------------
@@ -45,10 +45,7 @@ import aethelwerka.foundation.platform;    // Using: {endian_swap};
 	}
 //-----------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------
-// Exports:
-//-----------------------------------------------------------------------------
-export namespace aethelwerka
+namespace aethelwerka
 {
 
 	struct DummyStreamImplementation
@@ -170,7 +167,10 @@ export namespace aethelwerka
 		std::fstream m_file;
 	};
 
-	using dummy_serializer = Serializer<DummyStreamImplementation>;
-	using file_serializer  = Serializer<FileStreamImplementation>;
+	export
+	{
+		using DummyStream = Serializer<DummyStreamImplementation>;
+		using FileStream  = Serializer<FileStreamImplementation>;
+	}
 
 }  // namespace aethelwerka

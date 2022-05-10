@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{91c8226f-10fa-459e-be19-ad789e3a9d3a}</ProjectGuid>
+    <RootNamespace>pfr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <AllProjectIncludesArePublic>true</AllProjectIncludesArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <AllProjectIncludesArePublic>true</AllProjectIncludesArePublic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\core.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\cast_to_layout_compatible.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\config.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core14_classic.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core14_loophole.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core17.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\core17_generated.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\detectors.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\fields_count.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\for_each_field_impl.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\functional.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\io.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\make_flat_tuple_of_references.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\make_integer_sequence.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\offset_based_getter.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\rvalue_t.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\sequence_tuple.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\size_array.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\size_t_.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\stdtuple.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\tie_from_structure_tuple.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\detail\unsafe_declval.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\functions_for.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\functors.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\io.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\io_fields.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\ops.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\ops_fields.hpp" />
+    <ClInclude Include="..\..\..\..\vendor\libraries\pfr_non_boost\include\pfr\tuple_size.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

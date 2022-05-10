@@ -27,58 +27,7 @@ import aethelwerka.foundation.platform;    // Using: {endian_swap};
 //-----------------------------------------------------------------------------
 namespace aethelwerka
 {
-
-	template <typename T>
-	inline void endian_swap_visitor(std::endian data_endian, T *data)
-	{
-		auto field_visitor_lambda = [data_endian](auto &variable)
-		{
-			using field_type              = decltype(variable);
-			using unreferenced_field_type = std::remove_reference<field_type>::type;
-
-			if (std::is_class<unreferenced_field_type>::value and std::is_standard_layout<unreferenced_field_type>::value and std::is_trivial<unreferenced_field_type>::value)
-			{
-				print("[EndianSwapper] Sub-struct found!\n");
-				endian_swap_visitor(data_endian, &variable);
-			}
-
-			if (std::is_bounded_array<unreferenced_field_type>::value)
-			{
-				print("[EndianSwapper] Field Type: Bounded Array\n");
-
-				using array_value_type = std::remove_all_extents<unreferenced_field_type>::type;
-				if (sizeof(array_value_type) > 1)
-				{
-					auto *array_pointer = reinterpret_cast<array_value_type *>(&variable);
-					endian_swap<array_value_type>(data_endian, array_pointer, std::extent<unreferenced_field_type>::value);
-				}
-				else
-				{
-					print("[EndianSwapper] Skiped because sizeof(value_type) == 1\n");
-				}
-			}
-			else if (std::is_arithmetic<unreferenced_field_type>::value)
-			{
-				endian_swap(data_endian, &variable);
-			}
-			else if (std::is_enum<unreferenced_field_type>::value)
-			{
-				endian_swap<unreferenced_field_type>(data_endian, &variable);
-			}
-			else
-			{
-				aethelwerka::print("[EndianSwapper] Unknown or Unsupported type.\n");
-				// Todo (Krayfaus):
-				// - Add support for other common types.
-				// - Handle errors gracefully.
-			}
-		};
-
-		pfr::for_each_field(*data, field_visitor_lambda);
-	}
-
 	static constexpr auto k_stream_state_invalid = "Stream is not in a valid state.";
-
 }  // namespace aethelwerka
 
 //-----------------------------------------------------------------------------
@@ -138,9 +87,10 @@ export namespace aethelwerka
 			auto       data    = T{};
 			auto       pointer = reinterpret_cast<char *>(&data);
 			auto const lenght  = sizeof(T);
+
 			if (auto status = this->on_read(pointer, lenght); !status.success())
 			{
-				return make_unexpected(status);
+				return tl::make_unexpected(status);
 			}
 
 			endian_swap(data_endian, &data);
@@ -169,7 +119,7 @@ export namespace aethelwerka
 
 				if (!status.success())
 				{
-					return status;
+					return tl::make_unexpected(status);
 				}
 
 				if constexpr (sizeof(char_type) > sizeof(char))
@@ -185,7 +135,7 @@ export namespace aethelwerka
 
 		template <typename StringType>
 			requires(std::is_base_of<std::basic_string<char>, StringType>::value)
-		auto read(size_t lenght, std::endian data_endian = std::endian::native) -> tl::expected<StringType, Status>
+		auto read(std::size_t lenght, std::endian data_endian = std::endian::native) -> tl::expected<StringType, Status>
 		{
 			expect(this->validate(), k_stream_state_invalid);
 
@@ -193,12 +143,12 @@ export namespace aethelwerka
 			using char_type   = StringType::value_type;
 
 			auto result = string_type{};
-			result.reserve(lenght);
+			result.resize(lenght);
 
-			auto buffer = static_cast<char *>(result.data());
+			char *buffer = static_cast<char *>(&result[0]);
 			if (auto status = this->on_read(buffer, sizeof(char_type) * lenght); !status.success())
 			{
-				return status;
+				return tl::make_unexpected(status);
 			}
 
 			return result;
@@ -217,11 +167,8 @@ export namespace aethelwerka
 
 			if (auto status = this->on_read(pointer, lenght); !status.success())
 			{
-				return make_unexpected(status);
+				return tl::make_unexpected(status);
 			}
-
-			// Visit every field in the struct and swap the endianness if needed.
-			endian_swap_visitor(data_endian, &data);
 
 			return data;
 		}
@@ -239,7 +186,7 @@ export namespace aethelwerka
 
 			if (auto status = this->on_peek(pointer, lenght); !status.success())
 			{
-				return make_unexpected(status);
+				return tl::make_unexpected(status);
 			}
 
 			endian_swap(data_endian, &data);
@@ -269,9 +216,9 @@ export namespace aethelwerka
 			return Status::Success();
 		}
 
-		auto write_string(std::string text)
+		auto write(std::string text)
 		{
-			this->on_write(text.data(), text.size() + 1);
+			this->on_write(text.data(), text.size());
 		}
 	};
 

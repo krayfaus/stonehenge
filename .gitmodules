@@ -1,0 +1,6 @@
+[submodule "expected"]
+	path = vendor/libraries/expected
+	url = https://github.com/TartanLlama/expected
+[submodule "pfr_non_boost"]
+	path = vendor/libraries/pfr_non_boost
+	url = https://github.com/apolukhin/pfr_non_boost
